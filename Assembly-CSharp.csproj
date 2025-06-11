@@ -61,8 +61,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\RedDragon 1.2\Assets\Scripts\DragonExample.cs" />
-    <Compile Include="Assets\SimpleBounce.cs" />
-    <Compile Include="Assets\SuplexController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

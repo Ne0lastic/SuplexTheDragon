@@ -627,9 +627,6 @@ PrefabInstance:
       addedObject: {fileID: 1761280827}
     - targetCorrespondingSourceObject: {fileID: 4191574745234082322, guid: 7697844926639a740a8f8f1d2cc5d11d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1761280826}
-    - targetCorrespondingSourceObject: {fileID: 4191574745234082322, guid: 7697844926639a740a8f8f1d2cc5d11d, type: 3}
-      insertIndex: -1
       addedObject: {fileID: 1761280825}
     - targetCorrespondingSourceObject: {fileID: 4191574745234082322, guid: 7697844926639a740a8f8f1d2cc5d11d, type: 3}
       insertIndex: -1
@@ -736,31 +733,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1761280826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1761280823}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b780f8ab8c2e8a40af93a0deb7dbc1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dragon: {fileID: 0}
-  ground: {fileID: 554071356}
-  jumpSpeed: 5
-  arcHeight: 10
-  arcDuration: 1
-  bounceForce: 5
-  warriorLandSpeed: 2
-  whooshClip: {fileID: 0}
-  grabClip: {fileID: 0}
-  fwooshClip: {fileID: 0}
-  crackleClip: {fileID: 0}
-  bangClip: {fileID: 0}
-  thudClip: {fileID: 0}
 --- !u!54 &1761280827
 Rigidbody:
   m_ObjectHideFlags: 0
