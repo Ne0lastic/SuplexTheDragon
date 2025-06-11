@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scenes\RedDragon 1.2\Assets\Scripts\DragonExample.cs" />
+    <Compile Include="Assets\Scenes\ScaleAndSpin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
