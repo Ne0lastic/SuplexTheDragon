@@ -61,7 +61,10 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.38f1-x86_64\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Assets\Scenes\ScaleAndSpin.cs" />
+=======
+>>>>>>> parent of 20957df (Added a script that makes the orc spin and scale for testing)
     <Compile Include="Assets\Scenes\RedDragon 1.2\Assets\Scripts\DragonExample.cs" />
   </ItemGroup>
   <ItemGroup>
