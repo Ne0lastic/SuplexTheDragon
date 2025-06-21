@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/title.unity
     guid: b6661de1071266c47ba9c3a6dc1f333f
   - enabled: 1
-    path: Assets/Scenes/level1.unity
+    path: Assets/Scenes/level1/level1.unity
     guid: f1c0a345292e5b94bb0cb6763e4fe80f
   - enabled: 0
     path: Assets/Scenes/Yupp.unity
