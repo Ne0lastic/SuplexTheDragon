@@ -10,7 +10,7 @@ public class enemyscript : MonoBehaviour
     public GameObject player;
     public bool hit = false;
     public float health = 2;
-    public float attackRange = 8f; // Range within which the enemy can attack the player
+    public float attackRange = 4f; // Range within which the enemy can attack the player
     // Flag to check if the enemy has hit the player
     private NavMeshAgent agent; // Reference to the NavMeshAgent component
 
