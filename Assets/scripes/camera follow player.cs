@@ -1,3 +1,4 @@
+
 using UnityEngine.SceneManagement;
 using System.Collections;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class camerafollowplayer : MonoBehaviour
 {
     public GameObject player;
     public Vector3 offset = new Vector3(0, 0, -7);
-    public float rotationSpeed = 0.8f; // Adjust this to control rotation sensitivity
+    public float rotationSpeed = 1.0f; // Adjust this to control rotation sensitivity
     public GameObject pauseMenu;
     
 
@@ -19,7 +20,7 @@ public class camerafollowplayer : MonoBehaviour
         // Reinitialize references after the scene reloads
         if (player == null)
         {
-            player = GameObject.FindGameObjectWithTag("Player");
+            player = GameObject.FindGameObjectWithTag("player");
         }
 
         if (pauseMenu == null)
@@ -36,17 +37,13 @@ public class camerafollowplayer : MonoBehaviour
         {
             transform.position = player.transform.position + offset;
 
-            // Only rotate camera if not paused
-            if (Time.timeScale == 1)
-            {
-                // Get mouse movement
-                float mouseX = Input.GetAxis("Mouse X");
-                float mouseY = Input.GetAxis("Mouse Y");
+            // Get mouse movement
+            float mouseX = Input.GetAxis("Mouse X");
+            float mouseY = Input.GetAxis("Mouse Y");
 
-                // Rotate the camera slightly based on mouse movement
-                transform.RotateAround(player.transform.position, Vector3.up, mouseX * rotationSpeed);
-                transform.RotateAround(player.transform.position, transform.right, -mouseY * rotationSpeed);
-            }
+            // Rotate the camera slightly based on mouse movement
+            transform.RotateAround(player.transform.position, Vector3.up, mouseX * rotationSpeed);
+            transform.RotateAround(player.transform.position, transform.right, -mouseY * rotationSpeed);
         }
     }
 
@@ -61,7 +58,7 @@ public class camerafollowplayer : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             // Destroy any existing player GameObjects
-            GameObject[] existingPlayers = GameObject.FindGameObjectsWithTag("Player");
+            GameObject[] existingPlayers = GameObject.FindGameObjectsWithTag("player");
             foreach (GameObject existingPlayer in existingPlayers)
             {
                 Destroy(existingPlayer);
@@ -80,7 +77,7 @@ public class camerafollowplayer : MonoBehaviour
     {
         yield return null; // Wait for one frame to ensure the scene is fully loaded
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        player = GameObject.FindGameObjectWithTag("player");
         if (player == null)
         {
             Debug.LogError("Player not found after scene reload!");
@@ -94,7 +91,6 @@ public class camerafollowplayer : MonoBehaviour
             if (Time.timeScale == 1)
             {
                 Time.timeScale = 0;
-                // Do NOT set rotationSpeed = 0; allow camera rotation while paused
                 if (pauseMenu != null)
                 {
                     pauseMenu.SetActive(true); // Show the pause menu
@@ -103,7 +99,6 @@ public class camerafollowplayer : MonoBehaviour
             else
             {
                 Time.timeScale = 1;
-                // rotationSpeed remains unchanged
                 if (pauseMenu != null)
                 {
                     pauseMenu.SetActive(false); // Hide the pause menu
