@@ -284,7 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 5
-  currentHealth: 0
+  currentHealth: 5
   healthBar: {fileID: 1050844782}
 --- !u!1 &107321250
 GameObject:
@@ -433,6 +433,34 @@ PrefabInstance:
     - target: {fileID: 1658442983453283161, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
       propertyPath: m_Name
       value: Health Bar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488949764358601612, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_Direction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488949764358601612, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488949764358601612, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488949764358601612, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640171752654773680, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640171752654773680, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2640171752654773680, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.37200546
       objectReference: {fileID: 0}
     - target: {fileID: 5591957040368511617, guid: 84e3dc4d83fd38242913e07c421631fd, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2068,7 +2096,7 @@ MonoBehaviour:
   health: 2
   attackRange: 8
   cooldownTime: 2
-  hit: 0
+  hit: 1
 --- !u!1 &1049902730
 GameObject:
   m_ObjectHideFlags: 0

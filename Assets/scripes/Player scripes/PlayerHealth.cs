@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetHealth(currentHealth); // Ensure slider reflects initial health
     }
 
     void Update()
@@ -22,9 +23,18 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
+    public void TakeDamage(int damage) // Made public for external access
     {
-        currentHealth -= damage;
+        currentHealth -= damage; // Reduces health by exact damage amount (1 from bullet)
         healthBar.SetHealth(currentHealth);
+
+        // Check for player death
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0; // Prevent negative health
+            healthBar.SetHealth(currentHealth);
+            Debug.Log("Player is dead!");
+            // Add game over or respawn logic here
+        }
     }
 }
