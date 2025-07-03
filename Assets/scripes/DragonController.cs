@@ -58,15 +58,14 @@ public class EnemyKnightController : MonoBehaviour
     public RectTransform healthBarUI;
     public Transform healthBarCanvas;
 
-    private GameManager gameManager;
-    private QuestGiver questGiver;
+    
 
     void Start()
     {
         animationComponent = GetComponent<Animation>();
         navAgent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player")?.transform;
-        gameManager = FindObjectOfType<GameManager>();
+        
         spawnPoint = transform.position;
 
         navAgent.speed = walkSpeed;
@@ -94,7 +93,7 @@ public class EnemyKnightController : MonoBehaviour
         InvokeRepeating(nameof(RegenerateHealth), 1f, 1f);
     }
 
-    public void SetQuestGiver(QuestGiver giver) { questGiver = giver; }
+    
 
     void ConfigureAnimations()
     {
@@ -259,8 +258,6 @@ public class EnemyKnightController : MonoBehaviour
         animationComponent.Play(animations.death);
         PlayRandomSound(deathAudioSource, deathSounds);
 
-        gameManager?.RemoveEnemy(gameObject);
-        questGiver?.EnemySlain();
 
         HideHealthBar();
         Destroy(gameObject, 2f);
