@@ -77,7 +77,7 @@ public class camerafollowplayer : MonoBehaviour
     {
         yield return null; // Wait for one frame to ensure the scene is fully loaded
 
-        player = GameObject.FindGameObjectWithTag("player");
+        player = GameObject.FindGameObjectWithTag("Player");
         if (player == null)
         {
             Debug.LogError("Player not found after scene reload!");

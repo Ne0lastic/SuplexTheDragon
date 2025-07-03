@@ -4,11 +4,11 @@
 - Active scene:
   - Name: level1
   - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Dragon, Ground, Warrior
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Dragon, Ground, Warrior, Level
   - Layers:
     - Default, TransparentFX, Ignore Raycast, Water, UI
 - Active game object:
-  - Name: Canvas
-  - Tag: Untagged
-  - Layer: UI
+  - Name: Cube
+  - Tag: Level
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

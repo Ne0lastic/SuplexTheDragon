@@ -34,6 +34,7 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = 0; // Prevent negative health
             healthBar.SetHealth(currentHealth);
             Debug.Log("Player is dead!");
+            Destroy(gameObject);
             // Add game over or respawn logic here
         }
     }
