@@ -6,7 +6,7 @@ public class OgreScript : MonoBehaviour
     public GameObject GunObject;        // The key GameObject
     public Transform dropPoint;         // Where the key should be dropped from
 
-    private bool hasDroppedGun = false;
+    //private bool hasDroppedGun = false;
 
     void Start()
     {
@@ -26,19 +26,19 @@ public class OgreScript : MonoBehaviour
     {
         // Example condition: player is within 5 units
         GameObject player = GameObject.FindGameObjectWithTag("Player");
-        if (!hasDroppedGun && player && Vector3.Distance(player.transform.position, transform.position) < 5f)
+        /*if (!hasDroppedGun && player && Vector3.Distance(player.transform.position, transform.position) < 5f)
         {
             DropGun();
         }
         if (Input.GetKeyDown(KeyCode.P))
         {
             DropGun();
-        }
+        }*/
     }
 
     public void DropGun()
     {
-        hasDroppedGun = true;
+        //hasDroppedGun = true;
 
         // Detach the key
         GunObject.transform.SetParent(null);
@@ -52,6 +52,9 @@ public class OgreScript : MonoBehaviour
 
         Collider col = GunObject.GetComponent<Collider>();
         if (col != null) col.enabled = true;
+
+        GetComponent<AudioSource>().Play();
+
 
         Debug.Log("Ogre dropped the gun!");
     }
