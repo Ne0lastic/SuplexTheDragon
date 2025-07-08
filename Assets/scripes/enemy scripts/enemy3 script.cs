@@ -52,7 +52,8 @@ public class enemy3script : MonoBehaviour
         }
         if (health <= 0.0f) // Check if the enemy's health is less than or equal to 0
             {
-                agent.isStopped = true;
+                 agent.velocity = Vector3.zero;
+                agent.Stop();
                 // Freeze the Rigidbody to stop all movement
                 if (enemyRb != null)
                 {
