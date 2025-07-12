@@ -4,11 +4,11 @@
 - Active scene:
   - Name: level1
   - Tags:
-    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Dragon, Ground, Warrior, Level
+    - Untagged, Respawn, Finish, EditorOnly, MainCamera, Player, GameController, Dragon, Ground, Warrior, Level, CinemachineTarget, Gun, Ball, Key, Door, Sword, enemy1, enemy2, enemy3
   - Layers:
-    - Default, TransparentFX, Ignore Raycast, Water, UI
+    - Default, TransparentFX, Ignore Raycast, Water, UI, Ogre, gunLayer
 - Active game object:
-  - Name: enemy3
-  - Tag: Untagged
+  - Name: sword
+  - Tag: Sword
   - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

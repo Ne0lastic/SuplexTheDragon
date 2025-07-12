@@ -70,22 +70,28 @@ public class enemyscript : MonoBehaviour
         hit = false;
     }
     private IEnumerator doflash()
-{
-    // Change the color of all renderers to the flash color
-    foreach (Renderer renderer in rend)
     {
-        renderer.material.color = flashColor;
-    }
-    yield return new WaitForSeconds(flashTime); // Wait for the specified flash time
+        // Change the color of all renderers to the flash color
+        foreach (Renderer renderer in rend)
+        {
+            renderer.material.color = flashColor;
+        }
+        yield return new WaitForSeconds(flashTime); // Wait for the specified flash time
 
-    // Change the color of all renderers back to their original colors
-    for (int i = 0; i < rend.Length; i++)
-    {
-        rend[i].material.color = origColors[i];
+        // Change the color of all renderers back to their original colors
+        for (int i = 0; i < rend.Length; i++)
+        {
+            rend[i].material.color = origColors[i];
+        }
     }
-}
-    public void flashStart(){
+    public void flashStart()
+    {
         StopCoroutine(doflash()); // Stop any existing flash coroutines
         StartCoroutine(doflash()); // Start the flash coroutine
+    }
+    public void takedamage(float damage)
+    {
+        health -= damage;
+        flashStart();
     }
 }

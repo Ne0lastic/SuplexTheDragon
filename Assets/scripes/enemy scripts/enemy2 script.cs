@@ -24,21 +24,26 @@ public class enemy2script : MonoBehaviour
         if (health <= 0.0f) // Check if the enemy's health is less than or equal to 0
         {
             Destroy(gameObject);
-             // Destroy the enemy object
+            // Destroy the enemy object
         }
         if (Vector3.Distance(transform.position, player.transform.position) < attackRange) // Check if the enemy is close to the player
         {
-        attackRange = 16f;
-        Vector3 lookDirection = (player.transform.position - transform.position); // Move the enemy towards the player
-        transform.LookAt(player.transform.position); 
-        transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y + 180, 0);
-        // Instantiate the bullet at the fire point
-        if (Time.time >= lastShotTime + cooldownTime)
+            attackRange = 16f;
+            Vector3 lookDirection = (player.transform.position - transform.position); // Move the enemy towards the player
+            transform.LookAt(player.transform.position);
+            transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y + 180, 0);
+            // Instantiate the bullet at the fire point
+            if (Time.time >= lastShotTime + cooldownTime)
             {
                 // Instantiate the bullet at the fire point
                 enemybulletscript bullet1 = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
                 lastShotTime = Time.time; // Update the last shot time
             }
         }
+    }
+     public void takedamage(float damage)
+    {
+        health -= damage;
+        
     }
 }
