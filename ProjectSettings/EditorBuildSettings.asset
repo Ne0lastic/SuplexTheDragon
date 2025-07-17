@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Yupp.unity
     guid: 3550f078ff2df4c40967b237272709d9
+  - enabled: 1
+    path: Assets/Scenes/level2/level2.unity
+    guid: d86be76e66cb69445bc62c39dd187afc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
