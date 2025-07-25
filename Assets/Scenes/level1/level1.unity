@@ -2990,8 +2990,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  rb: {fileID: 0}
-  gameCamera: {fileID: 0}
+  rb: {fileID: 1371030666}
+  gameCamera: {fileID: 2088746120}
 --- !u!65 &1371030668
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9286,7 +9286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 511318b9061bedc4f840cffa97e5842a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1371030662}
   offset: {x: 0, y: 10, z: -2}
   rotationSpeed: 0.8
   pauseMenu: {fileID: 1331875379}
