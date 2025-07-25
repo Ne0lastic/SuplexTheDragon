@@ -69,6 +69,7 @@
     <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
     <Compile Include="Assets\scripes\DragonController.cs" />
     <Compile Include="Assets\scripes\UI scripes\main menu.cs" />
+    <Compile Include="Assets\scripes\Player scripes\sword.cs" />
     <Compile Include="Assets\scripes\Player scripes\PlayerHealth.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -87,7 +88,6 @@
     <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
-    <Compile Include="Assets\scripes\sword.cs" />
     <Compile Include="Assets\Joseph\Scripts\PlayerRaycast.cs" />
     <Compile Include="Assets\scripes\SceneLoader.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
