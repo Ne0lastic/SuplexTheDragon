@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9efcb49ffbc33f47baeef7e285bbeba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  music: {fileID: 0}
+  music: {fileID: 1973765279}
 --- !u!114 &214125602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2273,7 +2273,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729331326}
-  m_Enabled: 0
+  m_Enabled: 1
 --- !u!1 &765177298
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,8 +2395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250282bb4d6cb084080be2ae4ecabe00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerSceneName: level1
-  deathSceneName: Dream1
+  scenename: level1
 --- !u!1 &771875619
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,6 +2791,7 @@ MonoBehaviour:
   maxHealth: 5
   currentHealth: 5
   healthBar: {fileID: 554339730}
+  dreamWorldName: Dream1
 --- !u!54 &920727774
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4429,7 +4429,7 @@ GameObject:
   - component: {fileID: 1973765281}
   - component: {fileID: 1973765280}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: music
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
