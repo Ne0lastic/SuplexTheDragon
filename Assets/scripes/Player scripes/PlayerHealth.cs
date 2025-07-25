@@ -1,5 +1,6 @@
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+
+    public string dreamWorldName = "Dream1";
 
     void Start()
     {
@@ -35,7 +38,9 @@ public class PlayerHealth : MonoBehaviour
             healthBar.SetHealth(currentHealth);
             Debug.Log("Player is dead!");
             Destroy(gameObject);
-            // Add game over or respawn logic here
+
+            //Load Dream scene
+            SceneManager.LoadScene(dreamWorldName);
         }
     }
 }
