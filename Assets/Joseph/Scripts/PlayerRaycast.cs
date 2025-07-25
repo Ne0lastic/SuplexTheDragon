@@ -95,7 +95,24 @@ public class PlayerRaycast : MonoBehaviour
             {
                 Shoot();
             }
+
+        if (isHoldingKey && Input.GetKeyDown(KeyCode.E))
+        {
+            Debug.Log("Open door?");
+            Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2, Screen.height / 2));
+
+            //if (Physics.Raycast(ray, out RaycastHit hit, rayDistance, doorLayer))
+            if (Physics.Raycast(ray, out RaycastHit hit, rayDistance))
+            {
+                Debug.Log("Hit object: " + hit.collider.name);
+                if (hit.collider.CompareTag("Door"))
+                {
+                    Debug.Log("Call OpenDoor()??");
+                    OpenDoor(hit);
+                }
+            }
         }
+    }
 
         void PickUpGun(GameObject gun)
         {
@@ -130,9 +147,23 @@ public class PlayerRaycast : MonoBehaviour
                 //Debug.Log("Bang!");
             }
         }
-        /*void OpenDoor()
+        void OpenDoor(RaycastHit hit)
         {
-            transform.rotation = Quaternion.Euler(0, -75, 0);
-        }*/
-    }
+        Debug.Log("OpenDoor() called...");
+            Transform hinge = hit.transform.parent; // Get the parent of the door
+
+            if (hinge != null)
+            {
+            Debug.Log("rotating door!");
+                hinge.rotation = Quaternion.Euler(0, -75, 0);
+            }
+            else
+            {
+                Debug.LogWarning("No parent hinge found for: " + hit.transform.name);
+            }
+        }
+
+
+
+}
 
