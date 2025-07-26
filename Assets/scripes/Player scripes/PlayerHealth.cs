@@ -1,4 +1,3 @@
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,7 +8,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public string dreamWorldName = "Dream1";
+    public string[] dreamScenes = new string[] { "Dream1", "Dream2" }; // Add your two dream scene names here
 
     void Start()
     {
@@ -39,8 +38,16 @@ public class PlayerHealth : MonoBehaviour
             Debug.Log("Player is dead!");
             Destroy(gameObject);
 
-            //Load Dream scene
-            SceneManager.LoadScene(dreamWorldName);
+            // Randomly select and load one of the dream scenes
+            if (dreamScenes.Length > 0)
+            {
+                int randomIndex = Random.Range(0, dreamScenes.Length);
+                SceneManager.LoadScene(dreamScenes[randomIndex]);
+            }
+            else
+            {
+                Debug.LogError("No dream scenes defined!");
+            }
         }
     }
 }
