@@ -1970,11 +1970,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fef1477503dc4be4aabd64bf942e503b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!23 &1060482260 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 889567379990587545, guid: eaf6daaf49a03b74fafd162b6823b918, type: 3}
-  m_PrefabInstance: {fileID: 7022388807370645771}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1115199435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4799,42 +4794,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1371030662}
-    - target: {fileID: 5079343464122112901, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079343464122112901, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 5079343464122112901, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Size.x
-      value: 2.0053644
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Size.y
-      value: 1.9778689
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Size.z
-      value: 2.0386188
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Center.x
-      value: -0.010087862
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Center.y
-      value: 0.011570682
-      objectReference: {fileID: 0}
-    - target: {fileID: 6519670204244422493, guid: aab8b84c879e4a748b9c4eef0bb4ef04, type: 3}
-      propertyPath: m_Center.z
-      value: -0.013142761
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4896,10 +4855,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1371030662}
-    - target: {fileID: 6538559810718361102, guid: eaf6daaf49a03b74fafd162b6823b918, type: 3}
-      propertyPath: 'rend.Array.data[0]'
-      value: 
-      objectReference: {fileID: 1060482260}
     - target: {fileID: 6538559810718361102, guid: eaf6daaf49a03b74fafd162b6823b918, type: 3}
       propertyPath: explosionRingPrefab
       value: 
